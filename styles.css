@@ -2,4 +2,116 @@
     margin: 0 ;
     padding:0 ;
     box-sizing: border-box;
+
+}
+
+:root {
+    --front-height: 350vh ;
+}
+
+#del-forno {
+    height: calc(var(--front-height) + 61.5vh) ;
+    width: 100%;
+}
+
+#del-forno div {
+    width: 100% ;
+}
+
+#front {
+    border: 1px solid aqua ;
+    
+    height: var(--front-height) ;
+    z-index: 2 ;
+    position: relative;
+}
+
+#back {
+    background-color:  blue ;
+    height: auto ;
+    position: fixed;
+    top: 0 ;
+    left:0 ;
+    z-index: -1;
+}
+
+#banner {
+    height:inherit ;
+    border: 2px solid green;
+    z-index: -1 ;
+    position: absolute;
+    top: 0 ;
+    left: 0;
+
+}
+
+#nav-bar{
+    border:2px solid red;
+    height: 8vh;
+    margin-top: 50px;
+    padding: 0px 350px;
+    z-index: 1;
+    position: sticky;
+    top: 0 ;
+  
+}
+
+#header {
+    border: 2px solid hotpink ;
+    height: 100vh;
+    padding: 50px 60px;
+    position: relative;
+    background-color: black;
+   
+   
+     
+}
+
+#header-content {
+   
+    border: 2px solid yellow;
+    height: 100%;
+  
+
+}
+
+#second-section {
+    border: 2px solid black;
+    height: 68vh;
+    background-color: white;
+}
+
+#third-section {
+    border: 6px solid blue;
+    height: 45vh;
+  
+}
+
+#fourth-section {
+    border: 2px solid goldenrod;
+    height: 83vh;
+    background-color: white;
+}
+
+#background-image {
+    border:1px solid brown;
+    height: 60vh;
+
+}
+
+#footer {
+    border: 5px solid blueviolet ;
+    height: 61.5vh ;
+   
+}
+
+#first-footer {
+    border: 1px solid hotpink ;
+    height: 52vh;
+
+}
+
+#second-footer {
+    border: 1px solid orange ;
+
 }
