@@ -2,6 +2,7 @@
     margin: 0 ;
     padding:0 ;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 
 }
 
@@ -87,14 +88,76 @@
 }
 
 #order-button {
-    height: 100%;
+    height: 8vh;
     width: 14vh;
-    background-color: transparent;
+    background: transparent;
     border: 1px solid red;
     color:white ;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
+    letter-spacing: -1px;
+    position: fixed;
 
+}
+
+@keyframes order-button-hover {
+    from{height:0;background-color: red;}
+    to{background-color: red;}
+}
+
+.button-div {
+   height: 100%;
+   width: 14vh;
+}
+
+.button-div:hover{
+
+animation: order-button-hover 1s linear ;
+animation-direction: reverse;
+}
+
+#nav-content {
+    height: 100% ;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-links {
+    height: 100% ;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    color: white ;
+
+
+}
+
+#nav-links a {
+    display: inline-block;
+    padding: 20px 15px;
+    font-size: 14px ;
+    font-weight: bold;
+}
+
+.nav-icon {
+    margin-left: 5px ;
+}
+
+#nav-links a:hover {
+    color: red ;
+    cursor: grab;
+}
+
+
+.link-icon:hover .nav-icon {
+    transform: rotateX(180deg);
+    transition: 0.5s ;
+}
+
+#home-link {
+    color: red;
 }
 
 #header {
