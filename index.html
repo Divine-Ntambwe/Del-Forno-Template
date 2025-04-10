@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Del Forno</title>
 </head>
 <body>
@@ -24,18 +25,41 @@
 
               <div id="nav-content">
                 <div class="button-div">
-                  
-                  <button id="order-button">ORDER ONLINE</button>
+                   
+                  <button class="order-button">ORDER ONLINE</button>
                 </div>
 
                 <div id="nav-links">
 
-                  <a id="home-link">HOME</a>
-                  <a class="link-icon">ABOUT US <i class="fa fa-caret-down nav-icon"></i></a>
-                  <a class="link-icon">OPPORTUNITIES <i class="fa fa-caret-down nav-icon"></i></a>
-                  <a>STORES</a>
-                  <a>MENU</a>
-                  <a>PROMOTIONS</a>
+                  <a class="nav-link" id="home-link">HOME</a>
+                  <li class="link-icon">
+                    <a class="nav-link">ABOUT US
+                      <i class="fa fa-caret-down nav-icon"></i>
+                     
+                     </a>
+
+                     <div class="nav-dropdown">
+                      <a>OUR STORY</a>
+                      <a>BELLO COFFEE</a>
+                      <a>CONTACT HQ</a>
+                    </div>
+                  </li>
+
+                  <li class="link-icon">
+                    <a class="nav-link">OPPORTUNITIES
+                      <i class="fa fa-caret-down nav-icon"></i>
+                     
+                     </a>
+
+                     <div class="nav-dropdown">
+                      <a>EXISTING STORES</a>
+                      <a>NEW SITES</a>
+                    </div>
+                  </li>
+                  
+                  <a class="nav-link">STORES</a>
+                  <a class="nav-link">MENU</a>
+                  <a class="nav-link">PROMOTIONS</a>
                 </div>
               </div>  
 
@@ -51,7 +75,91 @@
             <div class="section" id="banner">
                
                 <div class="section" id="header">
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <img src="images/pic-01.jpg">
+
+                        <div class="headings-container">
+                            <div class="top-border"></div>
+
+                            <h1>WELCOME TO DELFORNO</h1>
+                            <h2>A PASSION FOR GOOD FOOD</h2>
+
+                           
+                            
+
+                            <div class="bottom-border">
+                              <span class="line"></span> <div class="dot-icon"><i class="fa fa-circle dot"></i></div> <span class="line"></span>
+                            </div>
+
+                            <div class="header-button">
+                              <a>
+                               View our menu <span class="button-arrow"><i class="fa fa-long-arrow-right"></i> </span>
+                              </a>
+                           </div>
+                            
+                          
+                          
+                        </div>
+
+                      </div>
+                      <div class="swiper-slide"><img src="images/pic-04.jpg"></div>
+                      <div class="swiper-slide"><img src="images/pic-10.jpg"></div>
+                      <div class="swiper-slide"><img src="images/mountainlake.jpg"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="autoplay-progress">
+
+                      <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                      </svg>
+
+                      <span id="time"></span>
+                    </div>
+                  </div>
+                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                  
+                  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 15500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      on: {
+        autoplayTimeLeft(s, time, progress) {
+          progressCircle.style.setProperty("--progress", 1 - progress);
+          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+        }
+      }
+    });
+  </script>
+
                     <div id="header-content">
+
+
+                        <div id="header-border">
+
+                        </div>
                         
                     </div>
                         
