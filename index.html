@@ -39,10 +39,15 @@
                      </a>
 
                      <div class="nav-dropdown">
-                      <a>OUR STORY</a>
-                      <a>BELLO COFFEE</a>
-                      <a>CONTACT HQ</a>
-                    </div>
+                      <div class="nav-dropdown-content">
+                        <a>OUR STORY</a>
+                        <a>BELLO COFFEE</a>
+                        <a>CONTACT HQ</a>
+                      </div>
+
+                     </div>
+
+                     
                   </li>
 
                   <li class="link-icon">
@@ -213,7 +218,7 @@
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
-        delay: 15500,
+        delay: 5000,
         disableOnInteraction: false
       },
       pagination: {
@@ -232,6 +237,30 @@
       }
     });
   </script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
+<script>
+  var swiper3El = document.querySelector(".mySwiper3");
+  Object.assign(swiper3El, {
+    grabCursor: true,
+    effect: "creative",
+    speed: 2500,
+    autoplay: {
+      delay: 5000, // 10 seconds
+      disableOnInteraction: false,
+    },
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: ["-20%", 0, -1],
+      },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
+  });
+  swiper3El.initialize();
+</script>
 
                     <div id="header-content">
 
@@ -301,10 +330,29 @@
                     <div class="red-line"></div>
 
                   </div>
+                  
                   <div id="flipping-imgs">
-                    <div class="flipping-img" id="flip1"></div>
+
+                    <div class="container1">
+                      <div class="flipping-img" id="flip1">
+                        
+                       
+
+                        <div class="front">
+                          <div class="front-content">uuu</div>
+                        </div>
+
+                        <div class="back">
+                          
+                        </div>
+                        
+                      </div>
+
+                    </div>
+
                     <div class="flipping-img" id="flip2"></div>
                     <div class="flipping-img" id="flip3"></div>
+
                   </div>
                   
 
@@ -320,6 +368,7 @@
         <div class="section" id="back">
          
           <div class="section" id="back-container">
+            <img id="bg-img"src="images/mountainlake.jpg">
             <div id="back-img">
             
             </div>
@@ -333,7 +382,7 @@
                 <div id="first-footer">
 
                   <div id="logo-socials">
-                    <img src="images/logo-white.png">
+                    <img id="footer-logo" src="images/logo2.png">
 
                     <div id="socials">
                         <p>Follow us:</p> <div id="social-icons"><i class="fa fa-facebook social-icon"></i><i class="fa fa-twitter social-icon"></i><i class="fa fa-instagram social-icon"></i><i class="fa fa-vine social-icon"></i> </div>
@@ -341,11 +390,43 @@
                     </div>
 
                   </div>
+
+                  <div id="footer-div"></div> 
+
+                  <div id="footer-info">
+                    <div id="about-us">
+                      <h4>About us</h4>
+                      <p>Opening its doors in 2000, Del Forno Pizza Pasta Grill, with many years of experience and knowledge in the pizza industry, is a concept that has grown from strength to strength and expanded, reaching many more of our valued patrons.</p>
+                    
+      
+                        <h5>Read More </h5>
+                      
+                    </div>
+                    
+                    
+                    <div id="contact">
+                      <h4>Contact info</h4>
+                      <div>
+                        <p>Call: <span>011 704 1513</span></p>
+                        <p>Email: <span>info@delforno.co.za</span></p>
+                         
+                      </div>
+
+                      <h5>Get in touch </h5>
+                      
+                    </div>
+                    
+                  </div>
+                
                  
                   
                 </div>
 
                 <div id="second-footer">
+                  <p id="copyright">© 2025 Del Forno | All Rights Reserved</p>
+                  <p class="back-top">Back To Top</p>
+                  <p class="arrow-back"><i class="fa fa-angle-double-up"></i></p>
+                  
                   
                 </div>
 
