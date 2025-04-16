@@ -16,6 +16,7 @@
     width: 100vw;
     position: relative;
     border: 4px solid hotpink ;
+    scroll-behavior: smooth;
 
 }
 
@@ -654,20 +655,11 @@
 
 .container1:hover > .flipping-img{
   cursor: grab ;
-  animation-play-state:running;
-  animation: flipfront 2s ;
   animation-delay: 0.1s;
-  transform: rotateY(180deg); 
-
+  animation: flipfront 1.5s ;
+  transition: transform 0s;
+  transform: rotateY(-180deg);
  
-  
- 
-}
-
-@keyframes flipback {
-    0% {transform: rotateY(0deg);}
-    50%{transform: rotateY(-190deg);}
-    100% {transform: rotateY(-180deg);}
 }
 
 
@@ -679,12 +671,7 @@
     position: relative;
     transform: rotateY(0deg);
     transition: 2s;
-
     transform-style: preserve-3d;
-
-
-
-  
 }
 
 .flipping-img img {
@@ -692,18 +679,21 @@
     width: 100% ;
     object-fit: fill ;
     position: absolute;
-    filter: brightness(60%);
+    filter: brightness(70%);
+    z-index: -1;
     
 }
 
 
 
 .front-content {
-    background-color: #616161;
-    width: 30px ;
-    height: 30px ;
     color: #fff;
-    perspective: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px ;
+    
 }
 
 .front, .back {
@@ -721,15 +711,51 @@
 .back {
     background-color: #5e646a;
     transform: rotateY(180deg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 0 50px;
+   gap: 30px ;
+
+    
 }
 
+.yellow-line {
+    width: 50px ;
+    height: 1.5px;
+    border: none;
+    background-color: rgb(255,190,0) ;
 
-#flip1 {
-    background-image: url(images/pgf-01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
 
-  
+.front h4 {
+    font-size: 22px ;
+}
+
+.front p {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.back p {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.back-red-line {
+    width: 30px ;
+    height: 5px ;
+    border-top: 5px dotted #ed1c24 ;
+}
+
+.back-icon {
+    color:#ed1c24 ;
+    font-size: 40px;
 }
 
 #background-image {
@@ -919,37 +945,43 @@
     color: #f94545;
     font-size: 14px ;
    
+   
     
 }
 
 .arrow-back {
     position: absolute;
-    left: 1510px;
+    left: 1515px;
+    top: 40px ;
     display: none;
     color: #f94545;
     font-size: 14px ;
-    pointer-events: none;
+    /* pointer-events: none; */
    
 }
 
+
+
 @keyframes back-top {
-    from{top: 0px}
-    to{top: 30px} 
+    from{top: 15px}
+    to{top: 40px} 
 }
 
-.back-top:hover + .arrow-back {
+#back-top:hover > .arrow-back {
+    /* transition: 0.5s; */
     display: block;
     animation-name: back-top ;
     animation-duration: 0.2s;
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
     cursor: grab;
+
     
 }
 
-.back-top:hover {
+#back-top:hover > .back-top{
    
   cursor: grab;
-  color: #222;
+  visibility: hidden;
   
 }
 
