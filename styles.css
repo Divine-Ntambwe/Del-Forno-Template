@@ -7,7 +7,7 @@
 }
 
 :root {
-    --front-height: 2708px ;
+    --front-height: 2710px ;
     --footer-height: 555px ;
 }
 
@@ -35,23 +35,27 @@
 
 #back {
     height: calc(var(--front-height) + var(--footer-height));
-    /* position: absolute; */
+    position: absolute;
     top: 0;
     left: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  
+    
     transition: 2s;
+
 
 }
 
 #back-container {
     z-index: -1;
     height: inherit;
+  
 }
 
 #bg-img {
     position: fixed;
     filter:brightness(50%);
     width: 100%;
+  
     
 }
 
@@ -61,16 +65,19 @@
     height: 1860px ;
     display: flex;
   
+  
 }
 
 #stopper {
-    height: calc(100% - var(--footer-height));
+    height: calc(100vh - var(--footer-height));
     width: 100%;
     align-self:flex-end;
+    border: 5px solid blue;
+
 }
 
 #sticky {
-    height: 1200px;
+    height: 100vh;
     position: sticky !important;
     position: -webkit-sticky;
     top: 0 ;
