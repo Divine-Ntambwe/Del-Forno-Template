@@ -78,8 +78,7 @@
     position: -webkit-sticky;
     top: 0 ;
     left: 0;
-  
-    border: 2px solid black;
+
 
 }
 
@@ -879,8 +878,12 @@ swiper-container {
     font-size: 14px;
     color:#ed1c24 ;
     align-self: flex-start;
+    
 }
-
+a{
+    color: inherit;
+    text-decoration: none;
+}
 .social-icon {
    
     height: 35px ;
