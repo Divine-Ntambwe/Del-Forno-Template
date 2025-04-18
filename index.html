@@ -84,9 +84,9 @@
             <div class="section" id="banner">
                
                 <div class="section" id="header">
-                  <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
 
+                  <swiper-container init="false" class="mySwiper3" navigation="true" pagination="true" loop="true">
+                    <swiper-slide>
                       <div class="swiper-slide">
                         <img src="images/pic-01.jpg">
 
@@ -114,6 +114,9 @@
                          </div>
 
                       </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
                       <div class="swiper-slide">
                         <img src="images/pic-04.jpg">
 
@@ -141,6 +144,11 @@
                        </div>
                       
                       </div>
+
+                    </swiper-slide>
+                        
+                    <swiper-slide>
+                      
                       <div class="swiper-slide">
                         <img src="images/pic-10.jpg">
 
@@ -169,6 +177,9 @@
 
                       
                       </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
                       <div class="swiper-slide">
                         <img src="images/mountainlake.jpg">
 
@@ -196,75 +207,9 @@
                        </div>
                       
                       </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <div class="autoplay-progress">
 
-                      <svg viewBox="0 0 48 48">
-                        <circle cx="24" cy="24" r="20"></circle>
-                      </svg>
-
-                      <span id="time"></span>
-                    </div>
-                  </div>
-                  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-                  
-                  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    const progressCircle = document.querySelector(".autoplay-progress svg");
-    const progressContent = document.querySelector(".autoplay-progress span");
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      on: {
-        autoplayTimeLeft(s, time, progress) {
-          progressCircle.style.setProperty("--progress", 1 - progress);
-          progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-        }
-      }
-    });
-  </script>
-
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
-<script>
-  var swiper3El = document.querySelector(".mySwiper3");
-  Object.assign(swiper3El, {
-    grabCursor: true,
-    effect: "creative",
-    speed: 5000,
-    autoplay: {
-      delay: 2500, // 10 seconds
-      disableOnInteraction: false,
-    },
-    creativeEffect: {
-      prev: {
-        shadow: true,
-        translate: ["-20%", 0, -1],
-      },
-      next: {
-        translate: ["100%", 0, 0],
-      },
-    },
-  });
-  swiper3El.initialize();
-</script>
+                    </swiper-slide>
+                  </swiper-container>
 
                     <div id="header-content">
 
@@ -363,7 +308,13 @@
                         </div>
 
                         <div class="back">
-                          <span class="back-icon"><i class="fa-solid fa-pizza-slice"></i></span>
+                         
+                          <div class="icon-bg">
+                            <div class="top-bg"></div>
+                            <span class="back-icon"><i class="fa-solid fa-pizza-slice"></i></span>
+                            <div class="bottom-bg"></div>
+                          </div>
+                          
                           <p>Our menu is a seductive journey of Mediterranean flavors, where each dish is crafted with passion.</p>
                           <div class="back-red-line"></div>
                         </div>
@@ -388,7 +339,12 @@
                         </div>
 
                         <div class="back">
-                          <span class="back-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+                         
+                          <div class="icon-bg">
+                            <div class="top-bg"></div>
+                            <span class="back-icon"><i class="fa-solid fa-house-chimney-window"></i></span>
+                            <div class="bottom-bg"></div>
+                          </div>
                           <p>Our stores blend warm ambiance with a touch charm, creating the perfect setting for unforgettable dining.</p>
                           <div class="back-red-line"></div>
                         </div>
@@ -413,7 +369,12 @@
                         </div>
 
                         <div class="back">
-                          <span class="back-icon"><i class="fa-regular fa-face-smile"></i></span>
+                          <div class="icon-bg">
+                            <div class="top-bg"></div>
+                            <span class="back-icon"><i class="fa-regular fa-face-smile"></i></span>
+                            <div class="bottom-bg"></div>
+                          </div>
+                        
                           <p>We offer a deliciously rewarding franchise opportunity, blending passion for food with proven success in the restaurant industry</p>
                           <div class="back-red-line"></div>
                         </div>
@@ -518,6 +479,26 @@
 
         
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+      var swiper3El = document.querySelector(".mySwiper3");
+      Object.assign(swiper3El, {
+        grabCursor: true,
+        autoplay: true,
+        speed: 2500,
+        effect: "creative",
+        creativeEffect: {
+          prev: {
+            shadow: true,
+            translate: ["-20%", 0, -1],
+          },
+          next: {
+            translate: ["100%", 0, 0],
+          },
+        },
+      });
+      swiper3El.initialize()
+    </script>
 </body>
 </html>
