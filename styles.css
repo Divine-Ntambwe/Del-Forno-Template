@@ -538,9 +538,15 @@ swiper-container {
     padding-left:20px;
     margin-top: 50px;
 }
+
+#second-section img {
+    /* width: 100%; */
+    /* height: 100%; */
+   
+}
 #overlapping-images {
     
-    width: 810px;
+    width: 710px;
     height: 100% ;
     display: flex;
     justify-content: end;
@@ -1062,7 +1068,6 @@ a{
 
     #front {
         height: var(--front-height) ;
-        background-color: #ed1c24;
     }
     
     #back {
@@ -1075,12 +1080,31 @@ a{
         align-self:flex-end;
     
     }
+
+    #nav-bar {
+        padding: 0px 170px; 
+    }
+    
     #second-section {
         height: 98vh;
     
        
     }
+     
+    #content2 {
+  
+        width: 765px; 
+        padding:0 60px 0 60px;
+       
+      
+    }
 
+    #img-front {
+        
+        left: 300px ;
+    
+    }
+   
     #third-section {
         height: 72vh;
       
